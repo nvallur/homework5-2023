@@ -1,0 +1,53 @@
+
+
+body{
+    font-family: "Poppins", serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+}
+
+/* Edit the css for the header tag (all instances) to use flex to match our example. */
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_links{
+    display: flex;
+    flex-direction: column;
+}
+/* background: #288088,
+solid 2px border using #45ADAD,
+20px of padding on the top and the bottom, 
+50px border-radius on the top left and right corners.  */
+
+.card > header{
+    background-color: #288088;
+    border: solid 2px #45ADAD;
+    padding: 20px 0;
+    border-radius: 50px 50px 0 0;
+}
+
+/* Edit the css for the card class to match our example. Achieve this by using a flex-property to specify an initial “size” of 450px.  You need to think about this from a “flex” perspective and realize that flex-direction will affect the size of the elements.  You can see that in the mobile view they all have the same width.  */
+
+
+.card{
+    flex-basis: 450px;
+    border-radius: 50px 50px 0 0;
+}
+.pricing{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+   
+  
+}
+a, a:visited{
+    color: #1a25f9;
+    /* text-decoration: none; */
+}
+
