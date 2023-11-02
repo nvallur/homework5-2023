@@ -1,4 +1,22 @@
 
+/* Animate the logo with keyframes.  (Here is a keyframes reference.) It should start at a width of 25px and grow to 475px.  It should also start with an opacity of 0 and end with an opacity of 1. The animation should take 5 seconds and only happen when the page is loaded. **You can complete this step later in the process - it won’t affect the larger views.  */
+
+#logo{
+    animation: logo 5s ease-in-out;
+}
+
+@keyframes logo{
+    from{
+        width: 25px;
+        opacity: 0;
+    }
+    to{
+        width: 475px;
+        opacity: 1;
+    }
+}
+
+
 
 body{
     font-family: "Poppins", serif;
@@ -39,7 +57,7 @@ solid 2px border using #45ADAD,
 }
 .pricing{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -49,5 +67,113 @@ solid 2px border using #45ADAD,
 a, a:visited{
     color: #1a25f9;
     /* text-decoration: none; */
+}
+
+/* Style the images in the gallery class. These elements will have a solid 10px border with a color of #50C7C7, 10px margin on all four sides and a width of 300px.   */
+
+.gallery img{
+    border: solid 10px #50C7C7;
+    margin: 10px;
+    width: 300px;   
+}
+.gallery{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width: 900px){
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card{
+        flex-basis: 275px;
+    }
+
+    body > header:first-of-type{
+        position: sticky;
+        /* width: 100%; */
+     
+    }
+
+
+}
+
+@media (prefers-reduced-motion){
+    #logo{
+        animation: none;
+    }
+}
+
+
+/* Change the font on your body to Arial with a backup value of  Helvetica
+
+
+The background image should be removed. 
+
+
+Edit the nav/nav_links elements so that they are spaced according to the image above.
+
+
+Edit the pricing class so that the elements align along the bottom.  As long as it aligns along the bottom we don't care if the cards aren't the same height.
+
+
+The card elements should have a solid border 2px of #45ADDD and use flex-basis of 325px. 
+
+
+No part of the gallery should be visible.
+
+
+Without using list-style-type add the thumbs up entity as shown in the cards. This is a challenge problem. You should not give or receive help when completing it.**For some people the thumbs up is not printing as yellow. That is fine. */
+@media print and (orientation: portrait){
+    body{
+        font-family: Arial, Helvetica;
+        background-image: none;
+  
+    }
+    body > header:first-of-type{
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+    #img_logo{
+        display: block;
+        margin: auto;
+    }
+ 
+    .nav_links{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+       
+      
+    }
+    .pricing{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: end;
+        justify-content: center;
+    }
+    .card{
+        border: solid 2px #45ADDD;
+        flex-basis: 325px;
+    }
+    .gallery, #gallery{
+        display: none;
+    }
+    .card li:nth-child(2)::after{
+        content: "👍";
+    }
+
 }
 
