@@ -100,6 +100,7 @@ a, a:visited{
 
     body > header:first-of-type{
         position: sticky;
+        top: 0;
         /* width: 100%; */
      
     }
